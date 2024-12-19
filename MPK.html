@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENTATION OF MPK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px red;
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5);
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeIn 2s 1s forwards;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            animation: zoomIn 1s 2s forwards;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05); /* Zoom-in efek saat hover */
+            opacity: 0.8; /* Memberikan efek reduksi opacity */
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6); /* Memberikan efek bayangan lebih besar */
+        }
+
+        /* Keyframe untuk animasi fade-in */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Keyframe untuk animasi slide-in judul */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Keyframe untuk animasi zoom-in pada gambar */
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>DOCUMENTATION OF MPK</h1>
+        <div class="photo-gallery">
+            <!-- Gambar 1 -->
+            <img src="MPK/MPK 1.jpg" alt="Foto 1">
+            
+            <!-- Gambar 2 -->
+            <img src="MPK/MPK 2.jpg" alt="Foto 2">
+            
+            <!-- Gambar 3 -->
+            <img src="MPK/MPK 3.jpg" alt="Foto 3">
+            
+            <!-- Gambar 4 -->
+            <img src="MPK/MPK 4.jpg" alt="Foto 4">
+            
+            <!-- Gambar 5 -->
+            <img src="MPK/MPK 5.jpg" alt="Foto 5">
+            
+            <!-- Gambar 6 -->
+            <img src="MPK/MPK 6.jpg" alt="Foto 6">
+            
+            <!-- Gambar 7 -->
+            <img src="MPK/MPK 7.jpg" alt="Foto 7">
+            
+            <!-- Gambar 8 -->
+            <img src="MPK/MPK 8.jpg" alt="Foto 8">
+        </div>
+    </div>
+
+</body>
+</html>

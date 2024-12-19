@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>PORTOFOLIO STEF</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+                <!-- AOS (Animate On Scroll) CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+        <!-- AOS (Animate On Scroll) JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+
+        <!--navigation menu-->
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <span>STEF</span>
+                </div>
+                <div class="links">
+                    <div class="link"><a href="#">Home</a></div>
+                    <div class="link"><a href="#about">About</a></div>
+                    <div class="link"><a href="#skills">Skills</a></div>
+                    <div class="link"><a href="#organizations">Organizations</a></div>
+                    <div class="link"><a href="#contact">Contact</a></div>
+                </div>
+                <!-- Ikon hamburger -->
+                <i class="fa-solid fa-bars hamburg" onclick="toggleHamburg()"></i>
+            </div>
+            
+            <!-- Dropdown menu (akan muncul saat hamburger diklik) -->
+            <div class="dropdown">
+                <div class="links">
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#organizations">Organizations</a>
+                    <a href="#contact">Contact</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="closeHamburg()"></i>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            function toggleHamburg() {
+                var hamburg = document.querySelector(".hamburg");
+                var dropdown = document.querySelector(".dropdown");
+    
+                hamburg.classList.toggle("active");
+                dropdown.classList.toggle("active");
+            }
+    
+            function closeHamburg() {
+                var hamburg = document.querySelector(".hamburg");
+                var dropdown = document.querySelector(".dropdown");
+    
+                hamburg.classList.remove("active");
+                dropdown.classList.remove("active");
+            }
+        </script>
+    
+        
+        <section>
+            <div class="main-container">
+                <div class="image">
+                    <img src="FOTO.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left">Hi I'm<span> STEF</span></h1>
+                    <div class="typewriter">I'm a<span class="typewriter-text"> Telco Engineer</span><label for=""></label></div>
+                    <p>I am a new student at Telkom University, majoring in Telecommunications Engineering, with a background in science. I actively contributed to school organizations, which helped develop my leadership skills and mindset. As a highly ambitious student, I am ready to face new challenges and make a positive impact.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/stefanus-indra-prasetya/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100011132195336&mibextid=ZbWKwL"><i class="fa-brands fa-facebook" target="_blank"></i></a>
+                        <a href="https://www.instagram.com/stefnpras/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/Stefprss?s=09"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+                    </div>
+                    <div class="btn">
+                        <a href="https://maps.app.goo.gl/6EN9PTSWJ69hKnXn9" target="_blank">
+                        <button>Here me</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--about section start-->
+
+        <section class=" about" id="about">
+            <div class="content" data-aos="fade-up">
+                <div class="title"><span>About Me</span></div>
+                <div class="about-details">
+                    <div class="left">
+                        <img src="FOTO.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="topic">Engineering in My Passion</div>
+                        <p data-aos="fade-up">
+                            I am a new student at Telkom University majoring in Telecommunications Engineering. With a high
+                            school educational background in science, I was able to maintain a top 3 ranking in my class for 3
+                            years, with a final score of 88. I actively contributed to school organizations, which honed my
+                            leadership skills over the same period. As a highly ambitious new student, I am ready to face new
+                            challenges and make a positive impact.
+                        </p>
+                        <div class="button">
+                            <a href="https://drive.google.com/file/d/1F90CSHzDmSdR5dO7TBULK6upLGlzgSfn/view?usp=sharing" target="_blank">
+                            <button>Download CV</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--My Skill Section Start-->
+        <section class="skills" id="skills">
+            <div class="content" data-aos="fade-up">
+                <div class="title"><span>My Skills</span></div>
+                <div class="text">
+                    <div class="topic">
+                        Skill Reflects Our Knowledge
+                    </div>
+                    <p data-aos="fade-right">Various life experiences, both in education and organizations, play a crucial role in shaping the skills we possess. For example, communication and leadership skills develop through interactions with others and team management in various activities. Additionally, experiences in facing challenges sharpen problem-solving and time management abilities, which are extremely valuable when dealing with difficult situations in the future.</p>
+                    <div class="experience">
+                        <div class="num">19</div>
+                        <div class="exp">
+                            Years Of <br/>
+                            Life
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="box">
+                            <div class="topic">Leadership</div>
+                            <div class="per">90%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Time Management</div>
+                            <div class="per">85%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Problem Solving</div>
+                            <div class="per">80%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Project Management</div>
+                            <div class="per">75%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--My Organization Start-->
+        <section class="organizations" id="organizations">
+            <div class="content" data-aos="fade-up"> 
+                <div class="title"><span>My Organizations Experiences</span></div>
+                <div class="boxes">
+                    <!-- Box 1 -->
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="topic">Majelis Perwakilan Kelas</div>
+                        <p>Served as deputy chairman, organized 58 events, conducted post-event evaluations for improvements, and held plenary meetings to design and disseminate work programs and member performance.</p>
+                        <!-- Button with link -->
+                        <a href="MPK.html" target="_blank">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="topic">Rohkris</div>
+                        <p>Served as deputy chairman, designed work programs with the chairman and supervisor, managed 3 events with internal and external parties, and was active in services such as being a worship leader, providing devotionals, and playing music.</p>
+                        <!-- Button with link -->
+                        <a href="ROHKRIS.html" target="_blank">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="topic">Band</div>
+                        <p>Carrying out administrative tasks such as managing schedules, documents, databases, reports and activity proposals as well as funding requests. Prepared administrative requirements for more than 20 work meetings, was active in internal and external school events, and had a basic understanding of music theory.</p>
+                        <!-- Button with link -->
+                        <a href="BAND.html" target="_blank">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="topic">Twine Fest</div>
+                        <p>As a logistics coordinator at Twine Fest, I interact with external parties to fulfill event logistics needs, coordinate with other divisions, and monitor logistics supplies to ensure the event runs smoothly. This experience hones my negotiation skills and increases my ambition to explore other event committees.</p>
+                        <!-- Button with link -->
+                        <a href="TWINFEST.html" target="_blank">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Contact Me section start-->
+        <section class="contact" id="contact">
+            <div class="content" data-aos="fade-up">
+                <div class="title">
+                    <span>Contact Me</span></div>
+                <div class="text">
+                    <div class="topic">Is there anything I can help with?</div>
+                    <p>Nanti di isi</p>
+                    <div class="button">
+                        <a href="https://wa.me/6285893111694" target="_blank">
+                        <button>Let's Chat</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer selection start-->
+        <footer>
+            <div class="text">
+                <span>Created By
+                    <a href="#">STEFANUS</a>
+                    &#169; 2024</span>
+            </div>
+        </footer>
+
+            <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        // Navbar toggle functionality
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlink"); // Corrected class name
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("click");
+        });
+
+        // Typed.js effect
+        var typed = new Typed(".typewriter", {
+            strings: ["Telecommunication Engineer", "Web Developer", "UX Designer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,  // Durasi animasi (ms)
+            easing: 'ease-in-out',  // Jenis easing (misalnya ease, ease-in, ease-out, dll.)
+            once: true,  // Menampilkan animasi hanya sekali saat scroll
+            mirror: false,  // Menghindari animasi saat elemen keluar dari viewport
+        });
+    </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1044 @@
+/*Google Font CDN Link*/
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/*Custom Scroll Bar CSS*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #b74b4b;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b74b4b;
+}
+/*navbar styling*/
+.nav{
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Logo utama */
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 2s ease-out, rotateLogo 3s ease-in-out forwards, wobble 1s ease-in-out;
+    text-align: center;
+}
+
+/* Warna dan efek bayangan untuk span */
+.logo span {
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b, 0 0 20px #b74b4b, 0 0 30px #b74b4b;
+    display: inline-block;
+    animation: typing 3s steps(10) 1s 1 normal both, blink 0.7s step-end infinite;
+}
+
+/* Animasi ketikan (typing effect) */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animasi kursor berkedip (blink effect) */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi goyang */
+@keyframes wobble {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Efek hover dengan glow */
+.logo:hover {
+    transform: scale(1.2); /* Efek zoom saat hover */
+    text-shadow: 0 0 20px #ffffff, 0 0 50px #b74b4b, 0 0 100px #b74b4b; /* Glow effect */
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    font-size: clamp(2.5rem,0.5rem + 5vw,3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #b74b4b;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #b74b4b;
+}
+
+.dropdown{
+    z-index: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #b74b4b;
+}
+
+section{
+    width: 100%;
+    min-height: 90vh;
+}
+
+section .main-container{
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: center;
+}
+
+@keyframes fadeInZoomIn {
+    0% {
+        opacity: 0;           /* Gambar mulai tersembunyi */
+        transform: scale(0.2); /* Gambar dimulai lebih kecil */
+    }
+    100% {
+        opacity: 1;           /* Gambar sepenuhnya terlihat */
+        transform: scale(0.7);  /* Kembali ke ukuran normal */
+    }
+}
+
+/* Animasi Hover (Zoom In dan Zoom Out) */
+@keyframes animate {
+    0% {
+        transform: scale(0.7); /* Gambar pada ukuran normal */
+        
+    }
+    50% {
+        transform: scale(0.8); /* Gambar sedikit membesar */
+        
+    }
+    100% {
+        transform: scale(0.7); /* Kembali ke ukuran normal */
+        
+    }
+}
+
+/* Aturan dasar untuk elemen gambar */
+.main-container .image {
+    width: 500vh;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #b74b4b;
+    animation: fadeInZoomIn 1.5s ease-out forwards; /* Animasi fade-in dan zoom-in saat gambar pertama kali muncul */
+    transition: transform 0.3s ease-in-out; /* Transisi saat hover */
+    margin-left: 100px; /* Geser gambar sedikit ke kanan */
+}
+
+/* Aturan untuk gambar di dalam .image */
+.main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+/* Menambahkan animasi saat hover */
+.main-container .image:hover {
+    animation: animate 1.5s ease-in-out infinite; /* Menjalankan animasi saat hover */
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;  /* Mulai dengan panjang 0 */
+    }
+    100% {
+        width: 100%;  /* Akhiri dengan panjang penuh */
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-right-color: transparent; /* Membuat kursor blink */
+    }
+    50% {
+        border-right-color: #b74b4b; /* Kursor muncul */
+    }
+    100% {
+        border-right-color: transparent; /* Kursor menghilang */
+    }
+}
+
+.main-container .content {
+    color: white;
+    width: 40%;
+    margin-right: 200px;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span {
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+    overflow: hidden;  /* Sembunyikan teks yang belum muncul */
+    white-space: nowrap;  /* Menjaga teks agar tetap dalam satu baris */
+    border-right: 3px solid #b74b4b;  /* Membuat kursor blink */
+    width: 0;  /* Mulai dengan panjang 0 */
+    animation: typewriter 4s steps(18) 1s forwards, blink 0.75s step-end infinite;  /* Efek mengetik dan kursor berkedip */
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.content .typewriter-text {
+    color: #b74b4b;
+    text-shadow: clamp(0.4rem, 0.2rem + 9vw);
+    margin: 10px 0;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 50%;
+    color: #b74b4b;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: black;
+    background-color: #b74b4b;
+    filter: drop-shadow(0 0 10px #b74b4b);
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #b74b4b;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1,1;
+    border: 2px solid #b74b4b;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #b74b4b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container .links {
+        display: none; /* Menyembunyikan link pada tampilan mobile */
+    }
+
+    .hamburg {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    section .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .main-container .image {
+        width: 300px;
+        height: 50vh;
+        margin-left: 0;
+    }
+
+    .main-container .content {
+        width: 80%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: clamp(1.2rem, 1.5rem + 5vw, 2rem);
+    }
+
+    .content .typewriter {
+        font-size: clamp(1rem, 1rem + 5vw, 2rem);
+    }
+
+    .social-links i {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+
+    .content button {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container .links {
+        display: block;
+        text-align: center;
+    }
+
+    .hamburg {
+        font-size: 2.5rem;
+    }
+
+    .main-container .image {
+        width: 200px;
+        height: 40vh;
+    }
+
+    .content h1 {
+        font-size: clamp(1rem, 1rem + 5vw, 1.5rem);
+    }
+
+    .content .typewriter {
+        font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+    }
+
+    .content button {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/*About Section Style*/
+
+section .content{
+    width: 80%;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    background: #b74b4b;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after{
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details .left{
+    width: 45%;
+}
+
+.about .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right{
+    width: 55%;
+}
+
+section .topic{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p{
+    text-align: justify;
+    color: white;
+}
+
+section .button {
+    margin: 16px 0;
+}
+
+section .button button {
+    outline: none;
+    padding: 12px 24px; /* Lebih banyak padding untuk memberi ruang yang cukup */
+    border-radius: 4px;
+    font-size: 18px; /* Ukuran font yang lebih seimbang */
+    font-weight: 500; /* Sedikit lebih tebal agar lebih mudah dibaca */
+    background: #b74b4b;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Menambahkan durasi transisi */
+    text-align: center; /* Memastikan teks berada di tengah */
+    line-height: 1.5; /* Menyesuaikan tinggi baris untuk memastikan teks vertikal rata */
+    display: inline-block; /* Mengatur tombol agar inline-block agar lebih mudah diposisikan */
+}
+
+section .button button:hover {
+    border-color: #b74b4b;
+    background-color: #fff;
+    color: #b74b4b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section .content {
+        width: 90%;
+    }
+
+    .about .about-details {
+        flex-direction: column; /* Menyusun elemen vertikal untuk tampilan mobile */
+        align-items: center;
+    }
+
+    .about .about-details .left,
+    .about .about-details .right {
+        width: 100%; /* Memberikan lebar 100% pada kedua sisi di perangkat kecil */
+        text-align: center; /* Menyusun teks menjadi rata tengah */
+    }
+
+    .about .left img {
+        height: 300px; /* Mengurangi ukuran gambar */
+        width: 300px;
+    }
+
+    section .title span {
+        font-size: 24px; /* Mengurangi ukuran font untuk judul */
+    }
+
+    section .button button {
+        font-size: 16px; /* Ukuran font tombol lebih kecil */
+        padding: 10px 20px; /* Mengurangi padding tombol untuk mobile */
+    }
+
+    section .topic {
+        font-size: 20px; /* Menyesuaikan ukuran font */
+    }
+}
+
+/* Penyesuaian untuk layar sangat kecil (misalnya, ponsel dengan layar sangat kecil) */
+@media (max-width: 480px) {
+    section .title span {
+        font-size: 20px; /* Mengurangi ukuran font untuk ponsel yang lebih kecil */
+    }
+
+    section .button button {
+        font-size: 14px; /* Ukuran font lebih kecil untuk tombol */
+        padding: 8px 16px; /* Lebih kecil untuk tombol */
+    }
+
+    .about .left img {
+        height: 250px; /* Ukuran gambar lebih kecil */
+        width: 250px; /* Lebar gambar menyesuaikan */
+    }
+
+    .about-details .right p {
+        font-size: 14px; /* Mengurangi ukuran font untuk ponsel kecil */
+    }
+
+    .topic {
+        font-size: 18px; /* Menyesuaikan ukuran font topic */
+    }
+}
+
+
+
+.skills .content {
+    padding: 40px 0;
+}
+
+.skills .title span {
+    font-size: 2rem;
+    color: white;
+}
+
+.skills .text .topic {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .text p {
+    color: white;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.skills .experience {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.skills .experience .num {
+    color: white;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.skills .experience .exp {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.skills .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.skills .box {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+}
+
+.skills .box .topic {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.skills .box .per {
+    color: #ff6f61;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Animasi untuk box */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kontainer box */
+.skills .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px; /* Menambahkan jarak antar box */
+}
+
+/* Box itu sendiri */
+.skills .box {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+    opacity: 0; /* Mulai dari transparan */
+    transform: translateY(20px); /* Mulai dengan posisi lebih bawah */
+    animation: fadeInUp 0.6s ease-out forwards; /* Terapkan animasi fadeInUp */
+}
+
+/* Efek pada topic dalam box */
+.skills .box .topic {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Angka persen dalam box */
+.skills .box .per {
+    color: #ff6f61;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Menambahkan sedikit delay pada setiap box agar muncul bertahap */
+.skills .box:nth-child(1) {
+    animation-delay: 0s; /* No delay for first box */
+}
+
+.skills .box:nth-child(2) {
+    animation-delay: 0.2s; /* Slight delay for second box */
+}
+
+.skills .box:nth-child(3) {
+    animation-delay: 0.4s; /* Slight delay for third box */
+}
+
+.skills .box:nth-child(4) {
+    animation-delay: 0.6s; /* Slight delay for fourth box */
+}
+
+/* Kontainer box */
+.skills .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px; /* Menambahkan jarak antar box */
+}
+
+/* Box itu sendiri */
+.skills .box {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards; /* Terapkan animasi fadeInUp */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek pada topic dalam box */
+.skills .box .topic {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Angka persen dalam box */
+.skills .box .per {
+    color: #ff6f61;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Efek hover pada box */
+.skills .box:hover {
+    transform: translateY(-10px); /* Menggerakkan box sedikit ke atas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    background-color: #444; /* Mengubah warna latar belakang */
+}
+
+/* Menambahkan sedikit delay pada setiap box agar muncul bertahap */
+.skills .box:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.skills .box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skills .box:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.skills .box:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Efek hover pada box dengan skala */
+.skills .box:hover {
+    transform: translateY(-10px) scale(1.05); /* Menambah skala box sedikit saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    background-color: #444; /* Mengubah warna latar belakang */
+    color: white; /* Pastikan teks tetap terlihat putih */
+}
+
+.skills .box:hover .per {
+    color: #ffcc00; /* Mengubah warna persen saat hover */
+}
+
+/* Styling untuk section Organizations */
+.organizations {
+    background: #000; /* Latar belakang hitam */
+    padding: 60px 0;
+}
+
+.organizations .content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.organizations .title span {
+    font-size: 2.5rem;
+    color: #fff; /* Teks judul putih untuk kontras dengan latar belakang hitam */
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+}
+
+/* Container for the boxes */
+.organizations .boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Membuat box responsif */
+    gap: 20px;
+}
+
+/* Individual box styles */
+.organizations .box {
+    background: #333; /* Warna box lebih terang dari latar belakang */
+    padding: 30px;
+    border-radius: 10px;
+    width: 22%;
+    text-align: center;
+    color: #fff; /* Teks di dalam box putih */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek hover pada box */
+.organizations .box:hover {
+    transform: translateY(-10px); /* Efek angkat saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Bayangan lebih gelap dan lebih besar */
+    background-color: #444; /* Warna latar belakang box lebih terang saat hover */
+}
+
+/* Efek hover pada ikon */
+.organizations .box:hover .icon {
+    transform: scale(1.1); /* Ikon membesar saat hover */
+}
+
+/* Ikon dalam box */
+.organizations .box .icon {
+    font-size: 3rem;
+    color: #ff6f61; /* Warna ikon */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Judul dalam box */
+.organizations .box .topic {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Paragraf dalam box */
+.organizations .box p {
+    font-size: 1rem;
+    color: #ccc; /* Warna teks lebih terang untuk kontras */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Responsif: Membuat box lebih kecil pada layar sempit */
+@media (max-width: 768px) {
+    .organizations .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .organizations .box {
+        width: 80%; /* Lebih lebar pada layar kecil */
+        margin-bottom: 30px;
+    }
+
+    .organizations .title span {
+        font-size: 2rem; /* Ukuran font judul lebih kecil pada layar sempit */
+    }
+}
+
+/* Animasi pada box saat muncul */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menambahkan animasi pada setiap box */
+.organizations .box:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.organizations .box:nth-child(2) {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.organizations .box:nth-child(3) {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.organizations .box:nth-child(4) {
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/*Contact Me CSS*/
+.contact{
+    background: black;
+}
+
+.contact .content{
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.contact .text{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+footer{
+    background: #b74b4b;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: #fff;
+}
+
+footer .text span a:hover{
+    text-decoration: underline;
+}
+
+.scroll-button a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background: #b74b4b;
+    padding: 7px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+/* Styling untuk ikon hamburger sebelum dropdown muncul */
+.hamburg {
+    font-size: 30px;
+    color: #fff; /* Warna ikon hamburger */
+    cursor: pointer;
+}
+
+/* Menyembunyikan hamburger saat dropdown aktif */
+.hamburg.active {
+    opacity: 0;
+    pointer-events: none; /* Menonaktifkan klik pada hamburger saat dropdown muncul */
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: fixed; /* Menempatkan dropdown secara tetap di layar */
+    top: 0;
+    right: 0;
+    width: 100%; /* Menutupi seluruh lebar layar */
+    height: 100vh; /* Menutupi seluruh tinggi layar */
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan */
+    display: none; /* Dropdown disembunyikan secara default */
+    transform: translateY(-100%); /* Menyembunyikan dropdown ke atas */
+    transition: transform 0.3s ease-in-out; /* Animasi saat dropdown muncul dan menghilang */
+    z-index: 100; /* Menempatkan dropdown di atas elemen lainnya */
+}
+
+/* Menampilkan dropdown saat class 'active' ditambahkan */
+.dropdown.active {
+    display: block; /* Menampilkan dropdown */
+    transform: translateY(0); /* Mengembalikan dropdown ke posisi semula */
+}
+
+/* Styling untuk link di dalam dropdown */
+.dropdown .links {
+    display: flex;
+    flex-direction: column; /* Menyusun item dalam dropdown secara vertikal */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Gaya untuk setiap link dalam dropdown */
+.dropdown .links a {
+    color: #fff; /* Warna teks putih */
+    font-size: 24px; /* Ukuran font yang besar */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    margin: 20px 0; /* Jarak antar link */
+}
+
+/* Efek hover pada link */
+.dropdown .links a:hover {
+    color: #f39c12; /* Mengubah warna teks saat hover */
+}
+
+/* Styling untuk ikon cancel (X) */
+.dropdown .cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff; /* Warna ikon X */
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0; /* Menyembunyikan ikon X secara default */
+    pointer-events: none; /* Menonaktifkan klik pada ikon X */
+    transition: opacity 0.3s ease; /* Animasi saat ikon X muncul */
+}
+
+/* Menampilkan ikon cancel saat dropdown aktif */
+.dropdown.active .cancel {
+    opacity: 1;
+    pointer-events: all; /* Mengaktifkan klik pada ikon X */
+}
